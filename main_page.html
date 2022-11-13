@@ -22,13 +22,14 @@
 </head>
 
 <body>
+
     <header>
         <img src="https://1000logos.net/wp-content/uploads/2022/08/One-Piece-Emblem.png" width="150px" "
             id=" logo" alt="logo">
         <nav id="nav">
-            <a href="" class="link_nav">About me</a>
-            <a href="" class="link_nav">Contact</a>
-            <a href="https://influmarketing.uscmarketingdigital.com/" class="link_nav">Blog</a>
+            <a href="#desciption" class="link_nav">About me</a>
+            <a href="#formdiv" class="link_nav">Contact</a>
+            <a href="https://influmarketing.uscmarketingdigital.com/" target="_blank" class="link_nav">Blog</a>
         </nav>
         <p>Bienvenido a mi barco...</p>
     </header>
@@ -41,13 +42,15 @@
             <div id="letra">
                 <h1>Sobre mi aventurera</h1>
                 <br>
-                <h3>Soy capitan Yanting, de la isla más grande del océano este, China. Después de acabar mi
-                    estudiouniversitario, navegué desde mi pueblo Guangzhou, en 2020, y llegué primero al Carribe, Costa
+                <h3>Soy la capitana Yanting, de la isla más grande del océano este, China. Después de acabar mi
+                    estudios universitarios, navegué desde mi pueblo, Guangzhou, en 2020, y llegué primero al Caribe,
+                    Costa
                     Rica.
                     Me sorprendí por el paisaje increible del lugar, por lo cual, estuve un año ahí.
                 </h3>
-                <h3> En el año pasado, reinicié mi aventurera porque nunca puedo olvidarme de la tesora, One Piece...Mi
-                    barco paró al final en la costa de Galicia. </h3>
+                <h3> En el año pasado reinicié mi aventura porque nunca puedo olvidarme del tesoro, del One
+                    Piece... Mi
+                    barco atracó al final de la costa de Galicia. </h3>
             </div>
         </div>
         <div id="map">
@@ -89,84 +92,129 @@
             </div>
         </div>
         <div id="skills">
-            <div>
-                <h2>Mis habilidades<i class="fa-solid fa-skull-crossbones"></i></h2>
+            <div id="label3">
+                <h2>Mis habilidades <i class="fa-solid fa-skull-crossbones"></i></h2>
             </div>
             <div id="skillbars">
-                <div id="js-bar" class="bar">
-                    <label for="js">Javascript<i class="fa-brands fa-js"></i></label>
-                    <progress id="js" max="100" value="20"> 30% </progress>
+                <div>
+                    <label for="js">Javascript</label>
+                    <div class="barContainer">
+                        <div id="js-bar" class="bar">
+
+                        </div>
+                    </div>
                 </div>
-                <div class="bar">
-                    <label for="node">Node<i class="fa-brands fa-node"></i></i></label>
-                    <progress id="node" max="100" value="20"> 10% </progress>
+                <div>
+                    <label for="node">Node</label>
+                    <div class="barContainer">
+                        <div class="bar" id="node_bar">
+                        </div>
+                    </div>
                 </div>
-                <div id="vue-bar" class="bar">
-                    <label for="vue">Vue<i class="fa-brands fa-vuejs"></i></label>
-                    <progress id="vue" max="100" value="40"> 40% </progress>
+                <div>
+                    <label for="vue">Vue</label>
+                    <div class="barContainer">
+                        <div id="vue_bar" class="bar">
+                        </div>
+                    </div>
                 </div>
-                <div id="py-bar" class="bar">
-                    <label for="python">Python<i class="fa-brands fa-python"></i></label>
-                    <progress id="python" max="100" value="60"> 60% </progress>
+                <div>
+                    <label for="python">Python</label>
+                    <div class="barContainer">
+                        <div id="py_bar" class="bar">
+
+
+                        </div>
+                    </div>
                 </div>
-                <div id="react-bar" class="bar">
-                    <label for="react">React<i class="fa-brands fa-react"></i></label>
-                    <progress id="react" max="100" value="40"> 98% </progress>
+                <div>
+                    <label for="react">React</label>
+                    <div class="barContainer">
+                        <div id="react_bar" class="bar">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="formdiv">
-            <label for="form">¿Quieres saber algo de One Piece?</label>
-            <form action="" id="form">
-                <div>
-                    <label for="firstname">Nombre</label>
-                    <input type="text" id="firstname" required>
-                </div>
-                <div>
-                    <label for="familyName">Nombre de familia</label>
-                    <input type="text" id="familyName" required>
-                </div>
-                <div>
-                    <label for="tel">Números</label>
-                    <input type="tel" id="tel" name="tel" required>
-                </div>
-                <div>
-                    <label for="git">Github Username</label>
-                    <input type="text" id="git" name="git">
+        <form action="" id="form">
+            <div id="formdiv">
+                <div id="label1">
+                    <label for="form">
+                        <h2>¿Quieres saber algo de One Piece?</h2>
+                    </label>
                 </div>
 
-                <div>
-                    <div>
-                        <input type="radio" id="batalla" name="conocer" value="Batalla de Marineford" checked>
-                        <label for="huey">Huey</label>
-                    </div>
+                <div id="formdiv2">
 
-                    <div>
-                        <input type="radio" id="Keepcoding" name="conocer" value="Keepcoding">
-                        <label for="Keepcoding">Cárcel de Keepcoding</label>
-                    </div>
+                    <div id="form2">
+                        <div>
+                            <label for="firstname">Nombre</label>
+                            <input type="text" id="firstname" required>
+                        </div>
+                        <div>
+                            <label for="familyName">Nombre de familia</label>
+                            <input type="text" id="familyName" required>
+                        </div>
+                        <div>
+                            <label for="tel">Números</label>
+                            <input type="tel" id="tel" name="tel" required>
+                        </div>
+                        <div>
+                            <label for="git">Github Username</label>
+                            <input type="text" id="git" name="git" value="@" pattern="@[([a-z0-9_\.\+-]*">
+                        </div>
+                        <div>
+                            <h3>¿Cómo me conociste?</h3>
+                        </div>
+                        <div>
+                            <input type="radio" id="batalla" name="conocer" value="batalla" checked>
+                            <label for="batalla">Batalla de Marineford</label>
+                        </div>
 
-                    <div>
+                        <div>
+                            <input type="radio" id="Keepcoding" name="conocer" value="Keepcoding">
+                            <label for="Keepcoding">Cárcel de Keepcoding</label>
+                        </div>
 
-                        <input type="radio" id="Redes" name="conocer" value="Redes">
-                        <label for="Redes">Redes sociales para piratas</label>
+                        <div>
+                            <input type="radio" id="Redes" name="conocer" value="Redes">
+                            <label for="Redes">Redes sociales para piratas</label>
+                        </div>
                     </div>
-                    <div>
-                        <label for="comment">Mensaje</label>
-                        <textarea name="comment" id="comment" cols="30" rows="10"
-                            placeholder="Hola, capitán Yanting..."></textarea>
+                    <div id="Mensaje">
+                        <label for="comment" style="display: block;">Mensaje</label>
+                        <textarea maxlength="10" name="comment" id="comment" cols="30" rows="10"
+                            placeholder="Hola, capitán Yanting..." required></textarea>
+                        <button style="display: block;">Enviar</button>
                     </div>
+                </div>
 
-                    <button>Enviar</button>
-            </form>
-            <div id="endimage">
-                <img src="https://64.media.tumblr.com/8c0c1b69686b5b3f1b9956de35f93292/6059e7e9c76a7d35-ec/s1280x1920/b9aacc2510d98e7c444b2bd6ce3a7acde028ddd8.png"
-                    width="100%" alt="">
+
+
             </div>
-
-        </div>
+        </form>
     </div>
+    <div id="tobecontinued">
+        <p>To be continued...</p>
+    </div>
+    <footer>
+        <div id="footer1">
+            <div id="div1">
+                <a href="https://www.linkedin.com/in/yanting-chen-%E9%99%88%E7%87%95%E5%A9%B7-705519141/"
+                    target="_blank"><i class="fa-brands fa-linkedin" style="color: black;"></i></a>
+                <a href="https://www.instagram.com/keepcoding_es/" target="_blank"><i class="fa-brands fa-instagram"
+                        style="color: black
+                    ;"></i></a>
+                <a href="https://twitter.com/KeepCoding_" target="_blank"><i class="fa-brands fa-twitter"
+                        style="color: black;"></i></a>
+            </div>
+            <p>All rights reserved 2022</p>
+        </div>
+    </footer>
 
+
+    </div>
 </body>
 
 </html>
