@@ -17,8 +17,36 @@ header {
     grid-row: 1/3;
     grid-column: 1/5;
     display: grid;
-    grid-template-rows: 30% 40% 30%;
+    grid-template-rows: 30% 40% 25%;
     grid-template-columns: 20% 50% 30%;
+}
+
+footer {
+    grid-column: 1/5;
+    height: 50px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 0;
+    margin-top: 50px;
+}
+
+#footer1 {
+    grid-column: 2/4;
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-self: center;
+    justify-content: space-around;
+}
+
+footer #footer1 #div1 {
+    display: flex;
+    justify-content: space-around;
 }
 
 header #logo {
@@ -28,6 +56,7 @@ header #logo {
 }
 
 header p {
+    z-index: 100;
     grid-row: 3;
     grid-column: 1/4;
     font-family: 'Lemontea Squash', sans-serif;
@@ -36,8 +65,10 @@ header p {
 
 }
 
-body progress {
-    background-color: black;
+#tobecontinued p {
+    font-family: 'Lemontea Squash', sans-serif;
+    font-size: 3.5vh;
+
 }
 
 #nav {
@@ -110,10 +141,104 @@ body h2 {
 }
 
 
-#mainbody #skillbars {
-    margin: 10px;
+#skillbars .barContainer {
+    background: white;
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 20px;
+    width: 300px;
 }
 
+.barContainer .bar {
+    background: black;
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 10px;
+    width: 300px;
+
+}
+
+#label3 h2 {
+    font-size: 3vh;
+    margin-bottom: 10px;
+}
+
+#js-bar {
+    animation: loadJS 4s normal forwards;
+}
+
+@keyframes loadJS {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 40%;
+    }
+}
+
+#node_bar {
+    animation: loadNode 4s normal forwards;
+}
+
+@keyframes loadNode {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 30%;
+    }
+}
+
+
+#vue_bar {
+    animation: vue_bar 4s normal forwards;
+}
+
+@keyframes vue_bar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+#py_bar {
+    animation: py_bar 4s normal forwards;
+}
+
+@keyframes py_bar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+#react_bar {
+    animation: react_bar 4s normal forwards;
+}
+
+@keyframes react_bar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 10%;
+    }
+}
 
 .link_nav {
     text-decoration: none;
@@ -128,12 +253,33 @@ body h2 {
     color: grey;
 }
 
-#skills,
-#formdiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+
+#mainbody #formdiv {
+    margin-top: 60px;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 5%, 95%, 10%;
+    grid-template-rows: 25%, 25%, 25%, 25%;
+}
+
+#formdiv #label1 {
+    grid-column: 2;
+    grid-row: 1;
+
+}
+
+#formdiv #formdiv2 {
+    grid-column: 2;
+    grid-row: 2/5;
+}
+
+#formdiv h2 {
+    font-size: 3vh;
+    margin-bottom: 20px;
+}
+
+#formdiv h3 {
+    font-size: 1.8vh;
 }
 
 #form input {
@@ -142,10 +288,31 @@ body h2 {
 }
 
 
-#form label {
+#formdiv2 label {
     font-family: 'NT Vanilla', sans-serif;
     font-family: 'NT Vanilla alternative', sans-serif;
+
 }
+
+#mainbody #skills {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#form2 div {
+    margin-top: 10px;
+}
+
+#Mensaje {
+    margin-top: 10px;
+}
+
 
 @media screen and (min-width:576px) {
     header p {
@@ -164,18 +331,26 @@ body h2 {
     }
 
     #map h2,
-    #map li {
-        margin-left: 100px;
+    #map li,
+    #skills h2 {
+        margin-left: 50px;
+    }
+
+    #skills progress {
+        margin-right: 50px;
     }
 
     #map img {
         max-width: 350px;
     }
 
-
 }
 
 @media screen and (min-width:786px) {
+    body {
+        padding: 50px;
+    }
+
     #letra {
         margin-top: 40px;
     }
@@ -205,6 +380,38 @@ body h2 {
         flex-direction: row;
         align-items: center;
     }
+
+    #skills h2 {
+        font-size: 2vh;
+    }
+
+    #mainbody #skills {
+        flex-direction: row;
+    }
+
+    #formdiv {
+        grid-template-columns: 35% 65%;
+    }
+
+    #formdiv #label1 {
+        grid-column: 1;
+        grid-row: 2/4;
+        margin-left: 30px;
+
+    }
+
+    #label1 h2,
+    #label3 h2 {
+        font-size: 3.5vh;
+    }
+
+    #formdiv #formdiv2 {
+        grid-column: 2;
+        grid-row: 1/5;
+        margin-left: 150px;
+        margin-bottom: 100px
+    }
+
 }
 
 
@@ -222,16 +429,66 @@ body h2 {
         margin-right: 300px;
     }
 
+    #mainbody #skills {
+        padding: 100px;
+        padding-top: 0px;
+        margin-left: 100px;
+        margin-right: 300px;
+        align-items: space-around;
+        padding-bottom: 50px;
+    }
+
+
+
+
     #map {
         align-items: space-around;
-        padding: 80px;
+        padding: 100px;
         padding-top: 40px;
         margin-left: 150px;
         margin-right: 300px;
+
     }
 
     #map h2,
     #map li {
         margin-left: 0px;
+    }
+
+
+    #formdiv #label1 {
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 30px;
+        font-size: 2vh;
+        margin-left: 220px;
+    }
+
+
+    #formdiv #formdiv2 {
+        margin-left: 220px;
+        grid-column: 1/3;
+        grid-row: 2/5;
+        display: grid;
+        grid-template-columns: 35% 35% 30%;
+    }
+
+    #formdiv2 #form2 {
+        grid-column: 1;
+    }
+
+
+
+    #formdiv2 #Mensaje {
+        grid-column: 2;
+
+    }
+
+    footer {
+        padding: 0;
+    }
+
+    #label1 h2 {
+        font-size: 2vh;
     }
 }
